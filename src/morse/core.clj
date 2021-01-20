@@ -9,14 +9,14 @@
     \F "..-." \O "---"  \X "-..-"  \6 "-...." \/ "-..-."  \_ "..--.-"
     \G "--."  \P ".--." \Y "-.--"  \7 "--..." \( "-.--."  \" ".-..-."
     \H "...." \Q "--.-" \Z "--.."  \8 "---.." \) "-.--.-" \$ "...-..-"
-\I ".."   \R ".-."  \0 "-----" \9 "----." \& ".-..."  \@ ".--.-."
-\space " "})
+    \I ".."   \R ".-."  \0 "-----" \9 "----." \& ".-..."  \@ ".--.-."
+    \space " "})
 
-(defn convert-letter [letter]
-  (->> (get morse-codes letter "")))
+(defn convert-letter [char]
+  (->> (get morse-codes char)))
 
-(defn morse [s]
-  (->> (.toUpperCase s)
+(defn morse [string]
+  (->> (.toUpperCase string)
        (map convert-letter)))
 
 
